@@ -11,6 +11,12 @@ I have been contributing to CHAOSS for almost an year. I tried for GSoC 2019 too
 
 ## Microtasks
 
-TBA
+- [ ] [microtask-1]
+- [ ] [microtask-2]
+- [ ] [microtask-3]
+- [ ] [microtask-4]
+- [ ] [microtask-5]
+- [ ] [microtask-6]
+
 
 I went through the three ideas, [#285](https://github.com/chaoss/grimoirelab/issues/285), [#286](https://github.com/chaoss/grimoirelab/issues/286), [#287](https://github.com/chaoss/grimoirelab/issues/287) for the GrimoireLab Project. I would like to spend some more time reading about each project and choosing one. As the inital microtasks (the first six) are same for all the ideas, I would like to start working on them.
