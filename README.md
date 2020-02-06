@@ -11,7 +11,7 @@ I have been contributing to CHAOSS for almost an year. I tried for GSoC 2019 too
 
 ## Microtasks
 
-- [ ] [microtask-1]
+- [x] [microtask-1](/microtask-1)
 - [ ] [microtask-2]
 - [ ] [microtask-3]
 - [ ] [microtask-4]
