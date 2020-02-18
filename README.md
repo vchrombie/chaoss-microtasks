@@ -8,6 +8,8 @@ I am a fourth year undergraduate pursuing my Bachelors in Computer Science and E
 
 I have been contributing to CHAOSS for almost an year. I tried for GSoC 2019 too and this repo has the micro-tasks for last year, [vchrombie/chaoss-microtasks-19](https://github.com/vchrombie/chaoss-microtasks-19).
 
+I would like to submit the proposal for the idea, [GSoC Idea: Creating Quality models using GrimoireLab and CHAOSS metrics (#287)](https://github.com/chaoss/grimoirelab/issues/287) of the GrimoireLab Project.
+
 
 ## Microtasks
 
@@ -17,6 +19,8 @@ I have been contributing to CHAOSS for almost an year. I tried for GSoC 2019 too
 - [ ] [microtask-4]
 - [ ] [microtask-5]
 - [ ] [microtask-6]
+- [ ] [microtask-7]
+- [ ] [microtask-8]
+- [ ] [microtask-9]
+- [ ] [microtask-10]
 
-
-I went through the three ideas, [#285](https://github.com/chaoss/grimoirelab/issues/285), [#286](https://github.com/chaoss/grimoirelab/issues/286), [#287](https://github.com/chaoss/grimoirelab/issues/287) for the GrimoireLab Project. I would like to spend some more time reading about each project and choosing one. As the inital microtasks (the first six) are same for all the ideas, I would like to start working on them.
