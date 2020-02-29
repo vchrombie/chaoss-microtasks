@@ -25,6 +25,8 @@ Set up Prosoul to be executed from PyCharm.
 9. Apply the changes and run the script. By default, the application will be accessible in: [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 ---
 
-Here is a small demo
+Here is a small demo video on YouTube
 
-![gif](images/setting_prosoul_pycharm.gif)
+Quick Link >> [Setting up Prosoul with PyCharm](https://www.youtube.com/watch?v=-wU1ck4ZrUw&t=20s)
+
+[![Setting up Prosoul](images/setting_up_prosoul.png "Setting up Prosoul on Youtube | Click to watch it")](http://www.youtube.com/watch?v=-wU1ck4ZrUw)
