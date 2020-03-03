@@ -1,0 +1,36 @@
+GET _search
+{
+  "size": 0,
+  "aggs": {
+    "1": {
+      "terms": {
+        "field": "author_name",
+        "size": 1000,
+        "order": {
+          "_count": "desc"
+        }
+      }
+    }
+  },
+  "docvalue_fields": [
+    "grimoire_creation_date"
+  ],
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match_all": {}
+        },
+        {
+          "range": {
+            "grimoire_creation_date": {
+              "gte": 1514764800000,
+              "lte": 1546300800000,
+              "format": "epoch_millis"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
