@@ -2,7 +2,7 @@
 
 Execute micro-mordred to collect, enrich and visualize data from Git and GitHub repositories.
 
-The main step for this microtask is to setup the dev environment which is explained in [microstask-4](/microtask-4).
+The main step for this microtask is to setup the dev environment which is explained in [microtask-4](/microtask-4).
 
 ---
 

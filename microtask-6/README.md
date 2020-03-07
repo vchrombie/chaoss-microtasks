@@ -1,11 +1,11 @@
-## microtask-2
+## microtask-6
 
 Using the dev tools in Kibiter, create a query that counts the number of unique authors on a Git repository from 2018-01-01 until 2019-01-01.
 
 The Dev Tools :wrench: option is present on the left (side bar) of the Kibana Dashboard, above Management :gear:. 
 
 You can access it with URL, [localhost:5601/app/kibana#/dev_tools/console?_g=()](http://localhost:5601/app/kibana#/dev_tools/console?_g=()) , 
-if you have the dev environment of grimoirelab setup locally as per the [microstask-4](/microtask-4).
+if you have the dev environment of grimoirelab setup locally as per the [microtask-4](/microtask-4).
 
 The important fields we need to extract from the task requirement is
 - backend: Git
