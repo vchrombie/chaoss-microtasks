@@ -20,7 +20,7 @@ I would like to submit the proposal for the idea, [GSoC Idea: Creating Quality m
 - [ ] [microtask-5]
 - [x] [microtask-6](/microtask-6)
 - [x] [microtask-7](/microtask-7)
-- [ ] [microtask-8]
-- [x] [microtask-9](/microtask-9)
+- [x] [microtask-8](/microtask-8)
+- [ ] [microtask-9]
 - [x] [microtask-10](/microtask-10)
 
