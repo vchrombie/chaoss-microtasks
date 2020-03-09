@@ -1,0 +1,20 @@
+{
+    "amfoss": {
+        "git": [
+            "https://github.com/amfoss/vidyaratna",
+            "https://github.com/amfoss/cms"
+        ],
+        "github": [
+            "https://github.com/amfoss/vidyaratna",
+            "https://github.com/amfoss/cms"
+        ],
+        "*github:pull": [
+            "https://github.com/amfoss/vidyaratna",
+            "https://github.com/amfoss/cms"
+        ],
+        "github:repo": [
+            "https://github.com/amfoss/vidyaratna",
+            "https://github.com/amfoss/cms"
+        ]
+    }
+}
