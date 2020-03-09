@@ -6,19 +6,19 @@ The main step for this microtask is to setup the dev environment which is explai
 
 ---
 
-The configurations files (setup.cfg and project.json) for each backend varies.
+The configurations files ([setup.cfg](setup.cfg) and [projects.json](projects.json)) for each backend varies.
 
 ### git
 
-Commits from Git
+Commits from Git.
 
 projects.json
 ```
 {
-    "Chaoss": {
+    "amfoss": {
         "git": [
-            "https:/github.com/chaoss/grimoirelab-perceval",
-            "https:/github.com/chaoss/grimoirelab-sirmordred"
+            "https://github.com/amfoss/vidyaratna",
+            "https://github.com/amfoss/cms"
         ]
     }
 }
@@ -27,133 +27,50 @@ projects.json
 setup.cfg
 ```
 [git]
-raw_index = git_raw
-enriched_index = git_enriched
-latest-items = true (suggested)
-studies = [enrich_demography:git, enrich_git_branches:git, enrich_areas_of_code:git, enrich_onion:git, enrich_extra_data:git] (optional)
+raw_index = git_chaoss
+enriched_index = git_chaoss_enriched
+#latest-items = true
+category = commit
+studies = [enrich_demography:git, enrich_areas_of_code:git, enrich_onion:git]
 
-[enrich_demography:git] (optional)
+[enrich_demography:git]
+date_field = utc_commit
+author_field = author_uuid
 
-[enrich_git_branches:git] (optional)
+[enrich_areas_of_code:git]
+#no_incremental = true
+in_index = git_chaoss
+out_index = git-aoc_chaoss_enriched
 
-[enrich_areas_of_code:git] (optional)
-in_index = git_raw
-out_index = git-aoc_enriched
-
-[enrich_onion:git] (optional)
-in_index = git_enriched
+[enrich_onion:git]
+in_index = git_chaoss_enriched
 out_index = git-onion_enriched
-
-[enrich_extra_data:git]
-json_url = https://gist.githubusercontent.com/zhquan/bb48654bed8a835ab2ba9a149230b11a/raw/5eef38de508e0a99fa9772db8aef114042e82e47/bitergia-example.txt
-
-[enrich_forecast_activity]
-out_index = git_study_forecast
+contribs_field = hash
+no_incremental = false
 ```
 
 ### github
 
-Issues and PRs from GitHub
-
-**issue**
-
-projects.json
-```
-{
-    "Chaoss": {
-        "github:issue": [
-            "https:/github.com/chaoss/grimoirelab-perceval",
-            "https:/github.com/chaoss/grimoirelab-sirmordred"
-        ]
-    }
-}
-```
-
-setup.cfg
-```
-[github:issue]
-raw_index = github_raw
-enriched_index = github_enriched
-api-token = xxxx
-category = issue
-sleep-for-rate = true
-no-archive = true (suggested)
-studies = [enrich_onion:github, 
-           enrich_geolocation:user, 
-           enrich_geolocation:assignee, 
-           enrich_extra_data:github,
-           enrich_backlog_analysis] (optional)
-
-[enrich_onion:github] (optional)
-in_index_iss = github_issues_onion-src
-in_index_prs = github_prs_onion-src
-out_index_iss = github-issues-onion_enriched
-out_index_prs = github-prs-onion_enriched
-
-[enrich_geolocation:user] (optional)
-location_field = user_location
-geolocation_field = user_geolocation
-
-[enrich_geolocation:assignee] (optional)
-location_field = assignee_location
-geolocation_field = assignee_geolocation
-
-[enrich_extra_data:github]
-json_url = https://gist.githubusercontent.com/zhquan/bb48654bed8a835ab2ba9a149230b11a/raw/5eef38de508e0a99fa9772db8aef114042e82e47/bitergia-example.txt
-
-[enrich_backlog_analysis]
-out_index = github_enrich_backlog
-interval_days = 7
-reduced_labels = [bug,enhancement]
-map_label = [others, bugs, enhancements]
-```
-
-**pull request**
+There are three things you can extract from GitHub backend. 
+- **issue**
+- **pull request**
+- **repo** (number of forks, starts, and subscribers in the repository)
 
 projects.json
 ```
 {
-    "Chaoss": {
-        "github:pull": [
-            "https:/github.com/chaoss/grimoirelab-perceval",
-            "https:/github.com/chaoss/grimoirelab-sirmordred"
-        ]
-    }
-}
-```
-
-setup.cfg
-```
-[github:pull]
-raw_index = github-pull_raw
-enriched_index = github-pull_enriched
-api-token = xxxx
-category = pull_request
-sleep-for-rate = true
-no-archive = true (suggested)
-studies = [enrich_geolocation:user, enrich_geolocation:assignee, enrich_extra_data:github] (optional)
-
-[enrich_geolocation:user]
-location_field = user_location
-geolocation_field = user_geolocation
-
-[enrich_geolocation:assignee]
-location_field = assignee_location
-geolocation_field = assignee_geolocation
-
-[enrich_extra_data:github]
-json_url = https://gist.githubusercontent.com/zhquan/bb48654bed8a835ab2ba9a149230b11a/raw/5eef38de508e0a99fa9772db8aef114042e82e47/bitergia-example.txt
-```
-
-**repo**: The number of forks, starts, and subscribers in the repository.
-
-projects.json
-```
-{
-    "Chaoss": {
+    "amfoss": {
+        "github": [
+            "https://github.com/amfoss/vidyaratna",
+            "https://github.com/amfoss/cms"
+        ],
+        "*github:pull": [
+            "https://github.com/amfoss/vidyaratna",
+            "https://github.com/amfoss/cms"
+        ],
         "github:repo": [
-            "https:/github.com/chaoss/grimoirelab-perceval",
-            "https:/github.com/chaoss/grimoirelab-sirmordred"
+            "https://github.com/amfoss/vidyaratna",
+            "https://github.com/amfoss/cms"
         ]
     }
 }
@@ -161,38 +78,64 @@ projects.json
 
 setup.cfg
 ```
-[github:repo]
-raw_index = github-repo_raw
-enriched_index = github-repo_enriched
-api-token = xxxx
-category = repository
+[github]
+raw_index = github_issues_chaoss
+enriched_index = github_issues_chaoss_enriched
+# update the token here
+api-token = ####
 sleep-for-rate = true
-no-archive = true (suggested)
-studies = [enrich_extra_data:github]
+no-archive = true
+category = issue
 
-[enrich_extra_data:github]
-json_url = https://gist.githubusercontent.com/zhquan/bb48654bed8a835ab2ba9a149230b11a/raw/5eef38de508e0a99fa9772db8aef114042e82e47/bitergia-example.txt
+[github:pull]
+raw_index = github_pulls_chaoss
+enriched_index = github_pulls_chaoss_enriched
+# update the token here
+api-token = ####
+sleep-for-rate = true
+no-archive = true
+category = pull_request
+studies = [enrich_onion:github]
+
+[github:repo]
+raw_index = github_pulls_chaoss
+enriched_index = github_repo_enriched
+category = repository
+# update the token here
+api-token = ####
+no-archive = true
+sleep-for-rate = true
+
+[enrich_onion:github]
+#no_incremental = true
+in_index_iss = github_issues_chaoss_enriched
+in_index_prs = github_pulls_chaoss_enriched
+out_index_iss = github_issues_onion-enriched
+out_index_prs = github_prs_onion-enriched
+data_source_iss = github-issues
+data_source_prs = github-prs
 ```
+
 ---
 
 ### Code:
 
-```
-micro.py --raw --enrich --cfg ./setup.cfg --backends <backend-name>
-```
-It executes the raw and enrich tasks for the cfg using the elasticsearch for the specific `backend-name` (git/github).
+Execute the `micro.py` file with the parameters
 
 ```
-micro.py --panels --cfg ./setup.cfg
+micro.py --raw --enrich --panels --cfg ./setup.cfg --backends github git
 ```
-It executes the panels task to load the Sigils panels to Kibiter.
 
 ### Result
 
+![on the way](images/otw.png "PyCharm running the micro-mordred script")
+
 #### git
 
-
+![Git Dashboard](images/git.png "Git Dashboard")
 
 #### github
 
+![Issue Dashboard](images/github-issue.png "Issue Dashboard")
 
+![PR Dashboard](images/github-pr.png "PR Dashboard")
