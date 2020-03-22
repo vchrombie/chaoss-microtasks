@@ -4,8 +4,19 @@ Submit at least a PR to one of the GrimoireLab repositories to fix an issue, imp
 
 I have listed the contributions to GrimoireLab components.
 
+#### [chaoss/grimoirelab](https://github.com/chaoss/grimoirelab)
+
+- [#309](https://github.com/chaoss/grimoirelab/pull/309): [README] Add a picture of GrimoireLab
+
+#### [chaoss/grimoirelab-sirmordred](https://github.com/chaoss/grimoirelab-sirmordred)
+
+- [#431](https://github.com/chaoss/grimoirelab-sirmordred/pull/431): Fix askbot configuration typos
+
 #### [chaoss/grimoirelab-elk](https://github.com/chaoss/grimoirelab-elk)
 
+- [#815](https://github.com/chaoss/grimoirelab-elk/pull/815): [schema] Update mattermost.csv
+- [#814](https://github.com/chaoss/grimoirelab-elk/pull/814): [schema] Update dockerhub.csv
+- [#812](https://github.com/chaoss/grimoirelab-elk/pull/812): [schema] Update askbot.csv
 - [#788](https://github.com/chaoss/grimoirelab-elk/pull/788): Update README.md 
 - [#787](https://github.com/chaoss/grimoirelab-elk/pull/787): [doc] fix mistake in README.md
 - [#699](https://github.com/chaoss/grimoirelab-elk/pull/699): remove the dashboards folder
@@ -18,6 +29,7 @@ places
 
 #### [chaoss/grimoirelab-perceval](https://github.com/chaoss/grimoirelab-perceval)
 
+- [#624](https://github.com/chaoss/grimoirelab-perceval/pull/624), [#623](https://github.com/chaoss/grimoirelab-perceval/pull/623): [perceval] Update license and copyright information
 - [#615](https://github.com/chaoss/grimoirelab-perceval/pull/615): [github] Update the docstrings
 - [#502](https://github.com/chaoss/grimoirelab-perceval/pull/502): [doc] Update documentation for github and gitlab backends
 
