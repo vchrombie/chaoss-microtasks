@@ -8,7 +8,7 @@
             "https://github.com/amfoss/vidyaratna",
             "https://github.com/amfoss/cms"
         ],
-        "*github:pull": [
+        "github:pull": [
             "https://github.com/amfoss/vidyaratna",
             "https://github.com/amfoss/cms"
         ],

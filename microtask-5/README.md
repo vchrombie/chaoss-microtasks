@@ -6,7 +6,7 @@ The main step for this microtask is to setup the dev environment which is explai
 
 ---
 
-The configurations files ([setup.cfg](setup.cfg) and [projects.json](projects.json)) for each backend varies.
+The configurations files ([setup.cfg](setup.cfg) and [projects.json](projects.json)) for each backend varies. I have provided the configuration files which I used in the repository (works for only git and github). Here is the [list of supported datasources and it's configurations](https://github.com/chaoss/grimoirelab-sirmordred#supported-data-sources-).
 
 ### git
 
@@ -64,7 +64,7 @@ projects.json
             "https://github.com/amfoss/vidyaratna",
             "https://github.com/amfoss/cms"
         ],
-        "*github:pull": [
+        "github:pull": [
             "https://github.com/amfoss/vidyaratna",
             "https://github.com/amfoss/cms"
         ],
@@ -82,29 +82,30 @@ setup.cfg
 raw_index = github_issues_chaoss
 enriched_index = github_issues_chaoss_enriched
 # update the token here
-api-token = ####
+api-token = xxxx
+category = issue
 sleep-for-rate = true
 no-archive = true
-category = issue
+sleep-time = 300
 
 [github:pull]
 raw_index = github_pulls_chaoss
 enriched_index = github_pulls_chaoss_enriched
 # update the token here
-api-token = ####
+api-token = xxxx
+category = pull_request
 sleep-for-rate = true
 no-archive = true
-category = pull_request
+sleep-time = 300
 studies = [enrich_onion:github]
 
 [github:repo]
 raw_index = github_pulls_chaoss
 enriched_index = github_repo_enriched
-category = repository
 # update the token here
-api-token = ####
+api-token = xxxx
+category = repository
 no-archive = true
-sleep-for-rate = true
 
 [enrich_onion:github]
 #no_incremental = true
