@@ -2,6 +2,54 @@
 
 Set up a dev environment to work on GrimoireLab. [Reference](https://github.com/chaoss/grimoirelab-sirmordred#setting-up-a-pycharm-dev-environment).
 
+We will be discussing the [source code and docker](https://github.com/chaoss/grimoirelab-sirmordred/blob/master/Getting-Started.md#source-code-and-docker-) method of setting up GrimoireLab developer environment. In this method, we use docker for setting up the elasticseach, kibiter (also MariaDB/MySQL if you need). And we will use the source code of the [GrimoireLab components](https://github.com/chaoss/grimoirelab#grimoirelab-components) to build it as a whole project.
+
+### Docker
+
+We are using Docker to build the elasticseach, kibiter (and MariaDB/MySQL). They can be installed by other means too. We are not much concerned about the method they are installed. Docker is the easiest way as it mostly avoids the errors caused by them.
+
+First you need to install docker and docker-compose. You can use these links.
+- [How To Install and Use Docker on Ubuntu 18.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
+- [Install Docker Compose | Docker Documentation](https://docs.docker.com/compose/install/)
+
+Now, configure a [docker-compose.yml](docker-compose.yml). You can use the file provided (I removed the MariaDB section as I have it working already). Check for the latest configuration from [here](https://github.com/chaoss/grimoirelab-sirmordred/blob/master/Getting-Started.md#docker-compose-with-searchguard-).
+
+docker-compose.yml
+```
+elasticsearch:
+  restart: on-failure:5
+  image: bitergia/elasticsearch:6.1.0-secured
+  command: elasticsearch -Enetwork.bind_host=0.0.0.0 -Ehttp.max_content_length=2000mb
+  environment:
+    - ES_JAVA_OPTS=-Xms2g -Xmx2g
+  ports:
+    - 9200:9200
+
+kibiter:
+  restart: on-failure:5
+  image: bitergia/kibiter:secured-v6.1.4-5
+  environment:
+    - PROJECT_NAME=Development
+    - NODE_OPTIONS=--max-old-space-size=1000
+    - ELASTICSEARCH_URL=https://elasticsearch:9200
+    - ELASTICSEARCH_USER=kibanaserver
+    - ELASTICSEARCH_PASSWORD=kibanaserver
+  links:
+    - elasticsearch
+  ports:
+    - 5601:5601
+```
+
+Now that you have the configuration file ready, run it using the below command.
+
+```
+docker-compose up -d
+```
+After this, you would be having the elasticsearch running on `9200` and kibiter on `5601` port numbers respectively. Make sure you have MariaDB/MySQL running too.
+
+### Source Code
+
+We will be using the source code of GrimoireLab components to build it. 
 
 1. Fork the required (15 repositories), clone them into `sources` folder and set their respective `upstream` remotes.
 This can be completed by using this [script](https://gist.github.com/vchrombie/18cc5f36fe5c934067addf44a487ead9#file-download-sources-sh).
