@@ -1,0 +1,44 @@
+{
+ "qualityModels": [
+  {
+   "goals": [
+    {
+     "attributes": [
+      {
+       "description": "",
+       "factoids": [],
+       "metrics": [
+        {
+         "calculation_type": "max",
+         "data_implementation": "Sum of Docker Smells",
+         "data_params": null,
+         "data_source_type": null,
+         "description": "",
+         "name": "sum-docker-smells",
+         "reverse_thresholds": false,
+         "thresholds": "20,40,60,80,100"
+        },
+        {
+         "calculation_type": "max",
+         "data_implementation": "Sum of Docker Dependencies",
+         "data_params": null,
+         "data_source_type": null,
+         "description": "",
+         "name": "sum-docker-dependencies",
+         "reverse_thresholds": false,
+         "thresholds": "20,40,60,80,100"
+        }
+       ],
+       "name": "docker-smells",
+       "subattributes": []
+      }
+     ],
+     "description": "",
+     "name": "activity",
+     "subgoals": []
+    }
+   ],
+   "name": "microtask-9"
+  }
+ ]
+}

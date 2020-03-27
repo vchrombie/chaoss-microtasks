@@ -1,0 +1,2 @@
+activity,docker-smells,Sum of Docker Smells,lagoon,max,300.0,5
+activity,docker-smells,Sum of Docker Dependencies,lagoon,max,99.0,4
