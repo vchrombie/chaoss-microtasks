@@ -39,7 +39,42 @@ places
 
 #### [Bitergia/prosoul](https://github.com/Bitergia/prosoul)
 
+- [#203](https://github.com/Bitergia/prosoul/pull/203): [assessment] Fix the TemplateSyntaxError
 - [#201](https://github.com/Bitergia/prosoul/pull/201): [UI] Improve the Login UI
 - [#200](https://github.com/Bitergia/prosoul/pull/200): [docs] Update README.md with installation video
 - [#199](https://github.com/Bitergia/prosoul/pull/199): add license headers and copyright information
 - [#196](https://github.com/Bitergia/prosoul/pull/196): [docs] fixed minor typos in README.md
+
+### Contributions to other CHAOSS repositories
+
+#### [chaoss/website](https://github.com/chaoss/website)
+
+- [#147](https://github.com/chaoss/website/pull/147): [meeting] Updated the changed schedule of wg-gmd meeting
+- [#143](https://github.com/chaoss/website/pull/143): updated info about the Value WG
+
+#### [chaoss/wg-evolution](https://github.com/chaoss/wg-evolution)
+
+- [#144](https://github.com/chaoss/wg-evolution/pull/144): [docs] Add a note regarding the metrics in README
+- [#130](https://github.com/chaoss/wg-evolution/pull/130): fixed few minor typos
+- [#112](https://github.com/chaoss/wg-evolution/pull/112): Grammatical Improvements
+- [#111](https://github.com/chaoss/wg-evolution/pull/111): added the CoC
+- [#107](https://github.com/chaoss/wg-evolution/pull/107): Fixed typos in documentation
+- [#106](https://github.com/chaoss/wg-evolution/pull/106): fixed the broken link for LICENSE
+
+#### [chaoss/wg-risk](https://github.com/chaoss/wg-risk)
+
+- [#47](https://github.com/chaoss/wg-risk/pull/47): add focus_area readme
+
+#### [chaoss/wg-diversity-inclusion](https://github.com/chaoss/wg-diversity-inclusion)
+
+- [#171](https://github.com/chaoss/wg-diversity-inclusion/pull/171): updated CoC with the changes
+
+#### [chaoss/wg-value](https://github.com/chaoss/wg-value)
+
+- [#11](https://github.com/chaoss/wg-value/pull/11): fixed-few-typos
+- [#5](https://github.com/chaoss/wg-value/pull/5): improvements in CoC and CONTRIBUTING.md
+
+#### [chaoss/governance](https://github.com/chaoss/governance)
+
+- [#175](https://github.com/chaoss/governance/pull/175): Update Outreachy-ideas.md
+- [#103](https://github.com/chaoss/governance/pull/103): fix minor typos in CoC
