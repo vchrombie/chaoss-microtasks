@@ -1,15 +1,8 @@
 # chaoss-microtasks
- Repository for storing and documenting micro-tasks of GrimoireLab Project for GSoC 2020 under CHAOSS.
- 
 
-## About Me
-
-I am a fourth year undergraduate pursuing my Bachelors in Computer Science and Engineering from Amrita Vishwa Vidyapeetham, Kollam, India. I am a member of [FOSS@Amrita](https://amfoss.in), open source club in our campus. My area of interests are Data Analytics and Machine Learning and I have good experience with Python.
-
-I have been contributing to CHAOSS for almost an year. I tried for GSoC 2019 too and this repo has the micro-tasks for last year, [vchrombie/chaoss-microtasks-19](https://github.com/vchrombie/chaoss-microtasks-19).
+Repository for storing and documenting micro-tasks of GrimoireLab Project for GSoC 2020 under CHAOSS.
 
 I would like to submit the proposal for the idea, [GSoC Idea: Creating Quality models using GrimoireLab and CHAOSS metrics (#287)](https://github.com/chaoss/grimoirelab/issues/287) of the GrimoireLab Project.
-
 
 ## Microtasks
 
@@ -82,3 +75,11 @@ The detailed procedure with results can be found [here](https://github.com/vchro
 
 You can find the whole list [here](https://github.com/vchrombie/chaoss-microtasks/tree/master/microtask-10#microtask-10).
 
+## About Me
+
+- My name is Venu Vardhan Reddy Tekula. I am a final year undergraduate stduent pursuing my Bachelors in Computer Science and Engineering (CSE) from Amrita Vishwa Vidyapeetham, Kollam, India. I was born and brought up in Hyderabad, India. 
+- I have good experience with Python. I worked with Python for almost three years now. Few of my projects include [amfoss/GitLit](https://github.com/amfoss/GitLit) and [snitch3s/hackbunch](https://github.com/snitch3s/hackbunch).
+- I am a member of [FOSS@Amrita](https://amfoss.in), open source club in our campus. 
+- My area of interests are Data Analytics, Cyber Security and Machine Learning. 
+- I have been contributing to CHAOSS for almost an year. I tried for GSoC 2019 too and this repo has the micro-tasks for last year, [vchrombie/chaoss-microtasks-19](https://github.com/vchrombie/chaoss-microtasks-19).
+- My last semester will also be completed by May 2020. I can spend 40+ hours a week for the GSoC project, if I get selected. Also, I don't have any commitments other than GSoC.
