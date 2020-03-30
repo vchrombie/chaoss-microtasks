@@ -2,7 +2,7 @@
 
 Repository for storing and documenting micro-tasks of GrimoireLab Project for GSoC 2020 under CHAOSS.
 
-I would like to submit the proposal for the idea, [GSoC Idea: Creating Quality models using GrimoireLab and CHAOSS metrics (#287)](https://github.com/chaoss/grimoirelab/issues/287) of the GrimoireLab Project.
+I would like to submit the proposal for the idea, [GSoC Idea: Creating Quality models using GrimoireLab and CHAOSS metrics (#287)](https://github.com/chaoss/grimoirelab/issues/287) of the GrimoireLab Project. The link to the proposal is [GSoC 20 Proposal CHAOSS - Venu](https://docs.google.com/document/d/1ofQRvt1uVfUN6eQX9epbn2UP30Yna90oGjnQY4ixbzM/edit?usp=sharing).
 
 ## Microtasks
 
