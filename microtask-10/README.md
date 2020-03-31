@@ -39,6 +39,8 @@ places
 
 #### [Bitergia/prosoul](https://github.com/Bitergia/prosoul)
 
+- [#207](https://github.com/Bitergia/prosoul/pull/207): [panels] update attribute-template.json
+- [#206](https://github.com/Bitergia/prosoul/pull/206): [views] update the viz result kibana_url
 - [#203](https://github.com/Bitergia/prosoul/pull/203): [assessment] Fix the TemplateSyntaxError
 - [#201](https://github.com/Bitergia/prosoul/pull/201): [UI] Improve the Login UI
 - [#200](https://github.com/Bitergia/prosoul/pull/200): [docs] Update README.md with installation video
